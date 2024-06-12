@@ -1,0 +1,70 @@
+/* RESET */
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+/* END RESET */
+
+
+/* CLASSES */
+
+.header__upper {
+  display: flex;
+  /* align-items: center; items in this flex-container centered by default. */
+  background-color: lightgray;
+  padding: 1rem 0.25rem;
+
+  img {
+    padding: 2rem;
+  }
+}
+
+.header__upper img {
+  display: inline-block;
+}
+
+.header__upper--location-info {
+  flex-grow: 1;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+}
+
+.header__upper--profile-info {
+  display: flex;
+  align-items: center;
+
+}
+
+.header__upper--tel {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 6;
+
+}
+
+.card {
+  display: inline-block;
+  background-color: gray;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.header_nav li {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
