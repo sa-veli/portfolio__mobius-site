@@ -29,10 +29,10 @@ img {
 
 
 /*------------------------------------*\
-  #CLASSES
+  #HEADER
 \*------------------------------------*/
 
-.gray {
+.gray-bgc-full-width {
   background-color: lightgray;
 }
 
@@ -112,6 +112,25 @@ img {
 
 
 /*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+/* FOOTER-UPPER */
+.footer-upper {
+  width: 80%;
+  margin: auto;
+}
+
+.footer-lower {
+  width: 80%;
+  margin: auto;
+}
+
+
+
+
+
+/*------------------------------------*\
   #STYLING LINKS
 \*------------------------------------*/
 
@@ -136,17 +155,17 @@ a:hover {
 main {
   width: 80%;
   margin: auto;
+  min-height: 100vh;
 }
 
 .main-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: repeat(6, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .card {
-  display: inline-block;
   background-color: gray;
   border-radius: 1rem;
   padding: 1rem;
@@ -155,23 +174,48 @@ main {
 .card--sklad {}
 
 .card--pereezd {
-  /* grid-row-start: 1; */
-  /* grid-row-end: 3; */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
-.card--sotrudnich {}
+.card--sotrudnich {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 
 .card--responsibility {}
 
-.card--mobile-sklad {}
+.card--mobile-sklad {
+  grid-column-start: 1;
+  grid-column-end: 4;
 
-.card--fullfilment {}
+}
 
-.card--tires {}
+.card--fullfilment {
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+.card--tires {
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
 
 .card--cafe {}
 
 .card-rekvizit {}
+
+.grid-for-last-row-cards-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
 
 .card--shop-office {}
 
