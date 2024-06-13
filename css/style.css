@@ -39,6 +39,28 @@ a[href*="tel:"] {
   font-weight: bold;
 }
 
+.button--white {
+  display: block;
+  border: 1px solid var(--MAIN-COLOR);
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0 0.7rem 0;
+  width: 16vw;
+  color: var(--MAIN-COLOR);
+  text-align: center;
+}
+
+.button--red {
+  display: block;
+  border: none;
+  /*  1px solid var(--MAIN-COLOR); */
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  width: 16vw;
+  color: white;
+  background-color: var(--MAIN-COLOR);
+  text-align: center;
+}
 
 
 
@@ -245,7 +267,7 @@ main {
   margin-bottom: 2.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 15%;
+  column-gap: auto;
 }
 
 .footer-upper__contact {
@@ -265,17 +287,6 @@ main {
     margin: 0.25rem 0 0.5rem 0;
   }
 
-  .button--white {
-    display: block;
-    border: 1px solid var(--MAIN-COLOR);
-    border-radius: 0.25rem;
-    padding: 1rem 2rem;
-    margin: 1.5rem 0 0.7rem 0;
-    width: 75%;
-    color: var(--MAIN-COLOR);
-    text-align: center;
-
-  }
 
   .button--white:last-child {
     margin-bottom: 0;
@@ -287,6 +298,13 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  /* column-gap: 20%; */
+  list-style: none;
+  text-wrap: nowrap;
+
+  li {
+    padding: 0.5rem 0;
+  }
 }
 
 .footer-upper__socialmedia-and-maps {
@@ -325,6 +343,14 @@ main {
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .button--white {
+    margin-top: 0.7rem;
+  }
 }
 
 
