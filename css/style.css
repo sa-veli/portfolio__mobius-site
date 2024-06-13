@@ -220,3 +220,76 @@ main {
 .card--shop-office {}
 
 .card--module-promo {}
+
+
+
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+/* Footer upper */
+
+.footer-upper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr, 1fr, 0, 5fr;
+}
+
+.footer-upper__contact {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.footer-upper__site-map ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.footer-upper__socialmedia-and-maps {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+
+  #YaMaps-button {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  #TWOgis-button {
+    /* grid-row-start: 2; */
+    /* grid-row-end: 3; */
+    grid-column-start: 4;
+    grid-column-end: 7;
+  }
+
+  #feedback-link {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+}
+
+.footer-upper__pay-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-upper__buttons-menu {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+
+/* Footer lower */
+
+.footer-lower {
+  display: flex;
+  justify-content: space-between;
+}
