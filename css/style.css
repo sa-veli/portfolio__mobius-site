@@ -310,12 +310,14 @@ main {
 .footer-upper__socialmedia-and-maps {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+  place-items: center;
 
   #YaMaps-button {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    /* grid-row-start: 2; */
+    /* grid-row-end: 3; */
     grid-column-start: 1;
     grid-column-end: 4;
+    /* justify-self: start; */
   }
 
   #TWOgis-button {
@@ -323,6 +325,20 @@ main {
     /* grid-row-end: 3; */
     grid-column-start: 4;
     grid-column-end: 7;
+    /* justify-self: end; */
+  }
+
+  .button--map-link {
+    /* display: block; */
+    border: 1px solid var(--MAIN-COLOR);
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+    /* margin: 1.5rem 0 0.7rem 0; */
+    width: 10vw;
+    color: var(--MAIN-COLOR);
+    /* text-align: center; */
+    display: grid;
+    place-items: center;
   }
 
   #feedback-link {
@@ -360,5 +376,19 @@ main {
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  /* place-items: end; */
+  justify-content: end;
+  white-space: nowrap;
+
+  p:first-of-type {
+    flex-grow: 1;
+  }
+
+  p {
+    margin: 2.5rem 0;
+  }
+
+  a {
+    margin: 2.5rem 1.5rem;
+  }
 }
