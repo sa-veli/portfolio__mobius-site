@@ -5,11 +5,25 @@ DONE 3. Make all content 70-80%(?) width.
 DONE 4. Style cards into grid. Fix their size. Last row of card using different size - 50% of width (flex-grow?).
 CANCELED 6. Make fixed height footer placeholder. Not planning to style it now.
 DONE 7. Style grid with fixed size boxes. In the end of working on project I change them to stock photos.
-8. Make footer.
-9. Style animations, hover states, font color and such.
+DONE 8. Make footer.
+
+## Style animations, hover states, font color and such.
+DONE 1. Главная - on hover: color: red; style - underline.
+DONE 2. Header nav buttons - on hover: bgc - --Main-color; color: white;
+3. Find cc0 images for cards.
+4. Cards - add bg images. On hover: scroll animation color is --MAIN; font-color: on animation turning white. Image is on top 
+and not changing. Animation time ~ 2 sec. When not hovering animation is slowly returning back. Myltiple animations can be played 
+at once.
+5. Buttons - on hover: bgc - --MAIN; color: white; Shadow some 5px;
+6. Maps buttons - on hover: shadown some 7px red and gradient (it's may be default shadow behavior).
+7. Make mobile design.
+8. Try to think about Главная / Для юридических лиц. What can be done to make it more apparent that it is portal/navigation to 
+another page?
 
 # To learn
 DONE 1. How to download assets from Figma. Is it possible to download them from the project-task?
 DONE 2. How to work with svg icons? How to style them and embed into HTML?
 DONE 3. How to embed tel numbers in HTML?
 DONE 4. How to work with grid (D. Gray tutorial)?
+5. How to make animations?
+6. Don't know how shadows are styled.
