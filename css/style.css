@@ -1,4 +1,20 @@
 /*------------------------------------*\
+  #NOTES
+\*------------------------------------*/
+
+/* 
+15.07.24
+CSS nesting is redundant when using with BEM naming. I want to use scope (as defined in computer science). A way
+to do it is BEM-like naming. I would like to use indenting to show how classes pack but it's not possible
+with my LSP. 
+So no nesting unless it's necessary.
+*/
+
+
+
+
+
+/*------------------------------------*\
   #RESET
 \*------------------------------------*/
 
@@ -21,7 +37,7 @@ img {
 \*------------------------------------*/
 
 :root {
-  --ACCENT-TEXT: #ae0f0a;
+  /* --ACCENT-TEXT: #ae0f0a; */
   --MAIN-COLOR: #ae0f0a;
 }
 
@@ -33,34 +49,62 @@ img {
   #GENERAL
 \*------------------------------------*/
 
-a[href*="tel:"] {
-  font-size: 1.25rem;
-  color: var(--MAIN-COLOR);
-  font-weight: bold;
+a {
+  text-decoration: none;
+  color: black;
+
+  &[href*="tel:"] {
+    font-size: 1.25rem;
+    color: var(--MAIN-COLOR);
+    font-weight: bold;
+  }
+
+  &[href*="mailto:"] {
+    color: var(--MAIN-COLOR);
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--MAIN-COLOR);
+  }
 }
 
-.button--white {
+.gray-bgc-full-width {
+  background-color: lightgray;
+}
+
+.button {
   display: block;
-  border: 1px solid var(--MAIN-COLOR);
+  border: 1px solid black;
   border-radius: 0.25rem;
   padding: 1rem 2rem;
   margin: 1.5rem 0 0.7rem 0;
-  width: 16vw;
-  color: var(--MAIN-COLOR);
+  color: white;
   text-align: center;
+
+  &.button--white {
+    border: 1px solid var(--MAIN-COLOR);
+    width: 16vw;
+    color: var(--MAIN-COLOR);
+  }
+
+  &.button--red {
+    border: none;
+    width: 16vw;
+    background-color: var(--MAIN-COLOR);
+    color: white;
+  }
+
+  &.button--maps-link {
+    margin: 0;
+    border: 1px solid var(--MAIN-COLOR);
+    width: 10vw;
+    color: var(--MAIN-COLOR);
+    display: grid;
+    place-items: center;
+  }
 }
 
-.button--red {
-  display: block;
-  border: none;
-  /*  1px solid var(--MAIN-COLOR); */
-  border-radius: 0.25rem;
-  padding: 1rem 2rem;
-  width: 16vw;
-  color: white;
-  background-color: var(--MAIN-COLOR);
-  text-align: center;
-}
 
 
 
@@ -68,10 +112,6 @@ a[href*="tel:"] {
 /*------------------------------------*\
   #HEADER
 \*------------------------------------*/
-
-.gray-bgc-full-width {
-  background-color: lightgray;
-}
 
 /* HEADER__UPPER */
 
@@ -122,12 +162,8 @@ a[href*="tel:"] {
 
 .header__lower--logo {
   flex-grow: 1;
-  display: flex;
-  justify-content: flex-start;
   margin: 1.5rem 0;
 }
-
-/* .header__lower--nav-wrapper {} */
 
 .header__lower--nav-ulist {
   display: flex;
@@ -139,25 +175,6 @@ a[href*="tel:"] {
     padding: 0.5rem 0 0.5rem 2rem;
     /* white-space: nowrap; */
   }
-
-}
-
-
-
-
-
-/*------------------------------------*\
-  #STYLING LINKS
-\*------------------------------------*/
-
-a {
-  text-decoration: none;
-  color: var(--MAIN-TEXT-COLOR);
-}
-
-a:focus,
-a:hover {
-  color: red;
 }
 
 
@@ -168,17 +185,17 @@ a:hover {
   #MAIN
 \*------------------------------------*/
 
-main p a:last-child {
-  color: #ae0f0a;
-  /* #b73f3b */
-}
-
-main p a:first-child {
-  color: gray;
-}
-
 main>p {
   margin-bottom: 1.5rem;
+
+  a:last-child {
+    color: var(--MAIN-COLOR);
+    /* #b73f3b */
+  }
+
+  a:first-child {
+    color: gray;
+  }
 }
 
 main {
@@ -298,12 +315,16 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  /* column-gap: 20%; */
+  column-gap: 5vw;
   list-style: none;
   text-wrap: nowrap;
 
   li {
     padding: 0.5rem 0;
+
+    a {
+      color: var(--MAIN-COLOR);
+    }
   }
 }
 
@@ -311,43 +332,37 @@ main {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(6, 1fr);
   place-items: center;
-
-  #YaMaps-button {
-    /* grid-row-start: 2; */
-    /* grid-row-end: 3; */
-    grid-column-start: 1;
-    grid-column-end: 4;
-    /* justify-self: start; */
-  }
-
-  #TWOgis-button {
-    /* grid-row-start: 2; */
-    /* grid-row-end: 3; */
-    grid-column-start: 4;
-    grid-column-end: 7;
-    /* justify-self: end; */
-  }
-
-  .button--map-link {
-    /* display: block; */
-    border: 1px solid var(--MAIN-COLOR);
-    border-radius: 0.25rem;
-    padding: 1rem 2rem;
-    /* margin: 1.5rem 0 0.7rem 0; */
-    width: 10vw;
-    color: var(--MAIN-COLOR);
-    /* text-align: center; */
-    display: grid;
-    place-items: center;
-  }
-
-  #feedback-link {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 7;
-  }
 }
+
+.footer-upper__socialmedia-icons-wrapper {
+  grid-column: 1 / 7;
+  justify-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+#YaMaps-button {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#TwoGis-button {
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+
+#feedback-link {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  align-self: self-start;
+  padding-top: 0.7rem;
+  color: var(--MAIN-COLOR);
+}
+
 
 .footer-upper__pay-options {
   display: flex;
