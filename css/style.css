@@ -78,11 +78,11 @@ a {
   border: 1px solid black;
   border-radius: 0.25rem;
   padding: 1rem 2rem;
-  margin: 1.5rem 0 0.7rem 0;
   color: white;
   text-align: center;
 
   &.button--white {
+    margin: 1.5rem 0 0.7rem 0;
     border: 1px solid var(--MAIN-COLOR);
     width: 16vw;
     color: var(--MAIN-COLOR);
@@ -96,7 +96,6 @@ a {
   }
 
   &.button--maps-link {
-    margin: 0;
     border: 1px solid var(--MAIN-COLOR);
     width: 10vw;
     color: var(--MAIN-COLOR);
@@ -315,12 +314,12 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  column-gap: 5vw;
+  /* column-gap: 3vw; */
   list-style: none;
   text-wrap: nowrap;
 
   li {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0.5rem 2rem;
 
     a {
       color: var(--MAIN-COLOR);
@@ -358,8 +357,8 @@ main {
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 7;
-  align-self: self-start;
-  padding-top: 0.7rem;
+  /* align-self: self-start; */
+  /* padding-top: 0.7rem; */
   color: var(--MAIN-COLOR);
 }
 
