@@ -6,6 +6,12 @@ DONE 4. Style cards into grid. Fix their size. Last row of card using different 
 CANCELED 6. Make fixed height footer placeholder. Not planning to style it now.
 DONE 7. Style grid with fixed size boxes. In the end of working on project I change them to stock photos.
 DONE 8. Make footer.
+9. Make simple mobile design. Add just one breakpoing for mobile. Tablets and such - when I want to polish site. 
+Now I need to make it work, not look shiny.
+10. Add Readme with gifs or similar stuff on how site animations look. Add general overview images. Add description of
+how, why and what skills I used to do this site.
+11. Blur logotypes. Change contact information to nosence.
+12. Rename repo and deploy site to public. Make it available online if it free and can be quickly done.
 
 ## Style animations, hover states, font color and such.
 DONE 1. Главная - on hover: color: red; style - underline.
@@ -15,7 +21,7 @@ DONE 2. Header nav buttons - on hover: bgc - --Main-color; color: white;
 and not changing. Animation time ~ 2 sec. When not hovering animation is slowly returning back. Myltiple animations can be played 
 at once.
 5. Buttons - on hover: bgc - --MAIN; color: white; Shadow some 5px;
-6. Maps buttons - on hover: shadown some 7px red and gradient (it's may be default shadow behavior).
+6. Maps buttons - on hover: shadow some 7px red and gradient (it's may be default shadow behavior).
 7. Make mobile design.
 8. Try to think about Главная / Для юридических лиц. What can be done to make it more apparent that it is portal/navigation to 
 another page?
@@ -27,3 +33,7 @@ DONE 3. How to embed tel numbers in HTML?
 DONE 4. How to work with grid (D. Gray tutorial)?
 5. How to make animations?
 6. Don't know how shadows are styled.
+
+# For polishing
+1. Add more breakpoints for diffirent screen dimensions. Style accordingly.
+Or check if site is responsive without it.
